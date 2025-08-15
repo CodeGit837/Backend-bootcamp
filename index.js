@@ -21,8 +21,7 @@ const cache = new NodeCache({ stdTTL: 600 });
 const connectDB = async () => {
   try {
     const mongoURI =
-      process.env.MONGODB_URI ||
-      "mongodb+srv://anshulojha1214:fY8vsuBKjs9Z1Bs4@cluster0.e0a7mlr.mongodb.net/backend-bootcamp";
+      process.env.MONGODB_URI;
 
     await mongoose.connect(mongoURI, {
       useNewUrlParser: true,
